@@ -74,7 +74,7 @@ void libsox_(write_audio_file)(const char *file_name, THTensor* src, const char 
   sox_signalinfo_t sinfo;
   sinfo.rate = sample_rate;
   sinfo.channels = nchannels;
-  sinfo.length = nsamples * nchannels;
+  sinfo.length = nsamples //* nchannels;
   sinfo.precision = 32;
   sinfo.mult = NULL;
   fd = sox_open_write(file_name, &sinfo, NULL, extension, NULL, NULL);
